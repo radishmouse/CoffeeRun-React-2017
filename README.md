@@ -20,3 +20,35 @@ so, we start with a `Row`
 just go ahead and comment out everything after the first two lines of `src/stories/index.js`
 
 import in your `Row` module
+
+## styling
+
+so, when you do multiple rows, notice that they are rendered inline.
+
+add a style to `Row.css` with a class and give that class
+`display: block;`
+
+then import the `Row.css` file into `Row.js`
+
+set the `className` *not* `class`
+- this is important, as react currently does
+not let you use reserved words (like "class")
+in your JSX.
+
+## adding onClick
+
+to handle events, you use attributes like
+`onClick`
+
+the value should be a function (or method) that
+expects to receive an event object.
+
+create a function called `_handleClick` that does just that. have it `console.log` the value of the event
+target.
+
+## adding props
+
+destructure the `val` property out of the (implicit) `props` argument
+
+set it as the `value` property
+

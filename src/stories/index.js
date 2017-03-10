@@ -12,9 +12,9 @@ storiesOf('Row', module)
   ))
   .add('multiple', () => (
     <span>
-      <Row />
-      <Row />
-      <Row />
+      <Row val={1} />
+      <Row val={2} />
+      <Row val={3} />
     </span>
   ))
 
