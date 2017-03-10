@@ -1,10 +1,11 @@
 import React from 'react';
+import './Row.css';
 
 const Row = () => (
-  <div>
+  <label className="row">
     <input type="checkbox" />
     Fancy coffee number one x43
-  </div>
+  </label>
 );
 
 export default Row;
