@@ -7,9 +7,17 @@ import Row from '../components/Row';
 // import Welcome from './Welcome';
 
 storiesOf('Row', module)
-  .add('with stuff', () => (
+  .add('single', () => (
     <Row />
-  ));
+  ))
+  .add('multiple', () => (
+    <span>
+      <Row />
+      <Row />
+      <Row />
+    </span>
+  ))
+
 
 // storiesOf('Welcome', module)
 //   .add('to Storybook', () => (
