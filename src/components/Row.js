@@ -1,12 +1,12 @@
 import React from 'react';
 import './Row.css';
 
-const Row = ({val}) => (
+const Row = ({val, clickHandler}) => (
   <label className="row">
     <input 
       type="checkbox" 
       value={val}
-      onClick={_handleClick}
+      onClick={clickHandler}
     />
     Fancy coffee number one x43
   </label>

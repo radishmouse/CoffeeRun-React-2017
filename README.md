@@ -52,3 +52,29 @@ destructure the `val` property out of the (implicit) `props` argument
 
 set it as the `value` property
 
+## receiving a function via props
+
+declare a function in your story that
+expects an event and prints its `target`'s `value`
+
+pass that as the `clickHandler` prop
+
+then update your `Row` so that:
+
+- it destructures `clickHandler` out of the `props`
+- instead of calling the local `_handleClick`, it calls `clickHandler`
+
+## what's interesting about this...
+
+is that your row does not know or care about what happens when it is clicked. it can display some info,
+it can set its `value` to something that was passed in, and it calls a callback when clicked.
+
+you've isolated its responsibilities to displaying some stuff and doing something when clicked.
+
+it handles display and event handling.
+but only in a very shallow way.
+and that's what you want.
+
+## propTypes
+
+what happens if you don't pass in `clickHandler`?
