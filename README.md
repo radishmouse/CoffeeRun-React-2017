@@ -84,6 +84,11 @@ life of a project.
 
 So, instead, you can use React's `propType` checking.
 Here's how to do that.
-(At some point, I'm going to have to switch them to classes.
-Though this might work better if we are doing propType checking with
-stateful classes.)
+
+
+### caveat: may not trigger on hot reload?
+
+weird: had to change from `const` to `var`
+then `propTypes` were checked for `let`, `const`, et. al
+
+In any case, `propTypes` checks occur always with `class` components

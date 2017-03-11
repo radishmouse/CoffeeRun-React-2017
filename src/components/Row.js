@@ -1,7 +1,8 @@
 import React from 'react';
 import './Row.css';
 
-/*const Row = ({val, clickHandler}) => (
+
+const Row = ({val, clickHandler}) => (
   <label className="row">
     <input 
       type="checkbox" 
@@ -15,9 +16,9 @@ import './Row.css';
 const _handleClick = (e) => {
   console.log(`you clicked ${e.target.value} !`);
 };
-*/
 
-class Row extends React.Component {
+
+/*class Row extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -35,10 +36,10 @@ class Row extends React.Component {
       </label>
     );
   }
-}
+}*/
 
 Row.propTypes = {
-  val: React.PropTypes.number
+  val: React.PropTypes.number.isRequired
 };
 
 export default Row;
