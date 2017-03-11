@@ -8,6 +8,7 @@ import {
 } from '@kadira/storybook';
 
 import Row from '../components/Row';
+import RowDescription from '../components/RowDescription';
 
 // This is for globally centering your stories.
 // and it should come at the very end
@@ -29,6 +30,19 @@ storiesOf('Row', module)
     </span>
   ));
 
+storiesOf('RowDescription', module)
+  .add('defaults',() => (
+    <RowDescription />
+  ))
+  .add('custom',() => (
+    <RowDescription 
+      coffee='espresso'
+      emailAddress='me@you.com'
+      size='Grande'
+      flavor='Almond'
+      strength={1}
+    />
+  ))
 
 const _printTargetValue = (e) => {
   console.log(`the story knows you clicked ${e.target.value} !`);

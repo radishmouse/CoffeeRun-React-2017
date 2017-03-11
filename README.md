@@ -96,3 +96,21 @@ In any case, `propTypes` checks occur always with `class` components
 ### defaultProps
 
 Now, if you want to provide defaults for props, do this:
+
+## making the row show meaningful data
+
+create a component for `RowDescription`
+it's job will be to format the description
+(and also to style it.)
+
+we'll use string literals (or whatever they're called)
+
+## adding a checklist
+
+- create the checklist component (.js and .css files)
+- set the proptypes
+
+in your storybook's `index.js`
+
+- add a new story
+- manually pass in an array of stuff, anything
