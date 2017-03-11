@@ -20,7 +20,7 @@ addDecorator((story) => (
 
 storiesOf('Row', module)
   .add('single', () => (
-    <Row clickHandler={_printTargetValue} />
+    <Row />
   ))
   .add('multiple', () => (
     <span>

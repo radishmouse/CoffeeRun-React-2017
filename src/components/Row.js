@@ -14,8 +14,8 @@ const Row = ({id, coffeeOrder, clickHandler}) => (
   </label>
 );
 
-const _handleClick = (e) => {
-  console.log(`you clicked ${e.target.value} !`);
+const _logFromRow = (e) => {
+  console.log(`Row knows you clicked ${e.target.value} !`);
 };
 
 
@@ -44,7 +44,8 @@ Row.propTypes = {
 };
 
 Row.defaultProps = {
- id: 42
+ id: 42,
+ clickHandler: _logFromRow
 };
 export default Row;
 
