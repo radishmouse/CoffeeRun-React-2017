@@ -15,7 +15,7 @@ storiesOf('Row', module)
   ))
   .add('multiple', () => (
     <span>
-      <Row val={1} clickHandler={_printTargetValue} />
+      <Row val={'1'} clickHandler={_printTargetValue} />
       <Row val={2} clickHandler={_printTargetValue} />
       <Row val={3} clickHandler={_printTargetValue} />
     </span>

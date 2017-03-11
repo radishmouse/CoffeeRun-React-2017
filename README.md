@@ -77,4 +77,13 @@ and that's what you want.
 
 ## propTypes
 
-what happens if you don't pass in `clickHandler`?
+what if you wanted to make sure that `val` was always a number?
+You could manually check each prop and run a number of `if/else`
+clauses to make sure, but this isn't a sustainable solution over the
+life of a project.
+
+So, instead, you can use React's `propType` checking.
+Here's how to do that.
+(At some point, I'm going to have to switch them to classes.
+Though this might work better if we are doing propType checking with
+stateful classes.)
