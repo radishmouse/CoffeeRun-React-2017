@@ -42,6 +42,9 @@ Row.propTypes = {
   val: React.PropTypes.number.isRequired
 };
 
+Row.defaultProps = {
+ val: 42
+};
 export default Row;
 
 

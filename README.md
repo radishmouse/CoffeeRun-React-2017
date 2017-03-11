@@ -92,3 +92,7 @@ weird: had to change from `const` to `var`
 then `propTypes` were checked for `let`, `const`, et. al
 
 In any case, `propTypes` checks occur always with `class` components
+
+### defaultProps
+
+Now, if you want to provide defaults for props, do this:
