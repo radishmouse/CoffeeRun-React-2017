@@ -9,6 +9,14 @@ import {
 
 import Row from '../components/Row';
 
+// This is for globally centering your stories.
+// and it should come at the very end
+addDecorator((story) => (
+  <div style={{ textAlign: 'center'}}>
+    {story()}
+  </div>
+));
+
 storiesOf('Row', module)
   .add('single', () => (
     <Row />
@@ -26,12 +34,5 @@ const _printTargetValue = (e) => {
   console.log(`the story knows you clicked ${e.target.value} !`);
 };
 
-// This is for globally centering your stories.
-// and it should come at the very end
-addDecorator((story) => (
-  <div style={{ textAlign: 'center'}}>
-    {story()}
-  </div>
-));
 // And this makes that globaly centering...global...
 configure(function () {}, module);
