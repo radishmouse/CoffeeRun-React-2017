@@ -3,9 +3,9 @@ import Row from './Row';
 
 const CheckList = ({ordersArray, clickHandler}) => (
     <div>
-      {ordersArray.map(({order}) => (
+      {ordersArray.map((order) => ( // note that there's no destructuring here
         <Row 
-          id={order.id} 
+          id={order.id}
           coffeeOrder={order} 
           clickHandler={clickHandler}
         />
