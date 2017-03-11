@@ -7,6 +7,7 @@ import {
   addDecorator
 } from '@kadira/storybook';
 
+import CheckList from '../components/CheckList';
 import Row from '../components/Row';
 import RowDescription from '../components/RowDescription';
 
@@ -17,6 +18,31 @@ addDecorator((story) => (
     {story()}
   </div>
 ));
+
+storiesOf('CheckList', module)
+  .add('two', () => (
+    <CheckList 
+      ordersArray={[
+        {
+          id: '1',
+          coffee: 'black coffee',
+          emailAddress: 'bob@bob.com',
+          size: 'Tall',
+          flavor: '',
+          strength: 32
+        },
+        {
+          id: '2',
+          coffee: 'espresso',
+          emailAddress: 'me@bob.com',
+          size: 'Triple',
+          flavor: 'Almond',
+          strength: 99
+        },
+      ]}
+      clickHandler={_printTargetValue }
+    />
+  ));
 
 storiesOf('Row', module)
   .add('single', () => (
