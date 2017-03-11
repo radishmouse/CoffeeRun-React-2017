@@ -114,3 +114,33 @@ in your storybook's `index.js`
 
 - add a new story
 - manually pass in an array of stuff, anything
+
+your `CheckList` is in charge of receiving an array of orders
+and a callback.
+
+for each order, it will produce a `Row` (using `.map`)
+each of those `Row` components will receive that single callback
+
+you can specify proptypes (noting that the array is required)
+and that the default prop for the clickHandler is the locally 
+defined console logger.
+
+But, that handler could be (and will be) a function that will
+modify the application's list of pending orders.
+
+
+### keys
+
+when you have a component that draws a number of children,
+and therefore acts as their parent, that component should
+assign a `key` property to each of them.
+
+the reason for this has to do with how React calculates when to
+redraw part of the DOM.
+
+to make it computationally simple for React to know what has
+and hasn't been updated, it benefits greatly from having
+unique keys assigned to items in a collection.
+otherwise, it would burn up a lot of its time and energy
+hashing individual elements and comparing those hashes, etc. etc.
+

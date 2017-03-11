@@ -5,6 +5,7 @@ const CheckList = ({ordersArray, clickHandler}) => (
     <div>
       {ordersArray.map((order) => ( // note that there's no destructuring here
         <Row 
+          key={order.id}
           id={order.id}
           coffeeOrder={order} 
           clickHandler={clickHandler}
