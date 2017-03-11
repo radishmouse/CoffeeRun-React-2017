@@ -24,9 +24,39 @@ storiesOf('Row', module)
   ))
   .add('multiple', () => (
     <span>
-      <Row val={'1'} clickHandler={_printTargetValue} />
-      <Row val={2} clickHandler={_printTargetValue} />
-      <Row val={3} clickHandler={_printTargetValue} />
+      <Row 
+        id={'1'} 
+        coffeeOrder={{
+          coffee: 'black coffee',
+          emailAddress: 'bob@bob.com',
+          size: 'Tall',
+          flavor: '',
+          strength: 32
+        }}
+        clickHandler={_printTargetValue} 
+      />
+      <Row 
+        id={2} 
+        coffeeOrder={{
+          coffee: 'frap',
+          emailAddress: 'jiggy@bob.com',
+          size: 'Tall',
+          flavor: 'gold',
+          strength: 3
+        }}
+        clickHandler={_printTargetValue} 
+      />
+      <Row 
+        id={3} 
+        coffeeOrder={{
+          coffee: 'macchiato',
+          emailAddress: 'joe@bob.com',
+          size: 'Vente',
+          flavor: 'orangina',
+          strength: 70 
+        }}
+        clickHandler={_printTargetValue} 
+      />
     </span>
   ));
 

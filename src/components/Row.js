@@ -1,15 +1,16 @@
 import React from 'react';
 import './Row.css';
+import RowDescription from './RowDescription';
 
 
-const Row = ({val, clickHandler}) => (
+const Row = ({id, coffeeOrder, clickHandler}) => (
   <label className="row">
     <input 
       type="checkbox" 
-      value={val}
+      value={id}
       onClick={clickHandler}
     />
-    Fancy coffee number one x43
+    <RowDescription {...coffeeOrder} />
   </label>
 );
 
@@ -39,11 +40,11 @@ const _handleClick = (e) => {
 }*/
 
 Row.propTypes = {
-  val: React.PropTypes.number.isRequired
+  id: React.PropTypes.number.isRequired
 };
 
 Row.defaultProps = {
- val: 42
+ id: 42
 };
 export default Row;
 
