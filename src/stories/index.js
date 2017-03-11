@@ -26,20 +26,6 @@ const _printTargetValue = (e) => {
   console.log(`the story knows you clicked ${e.target.value} !`);
 };
 
-// storiesOf('Welcome', module)
-//   .add('to Storybook', () => (
-//     <Welcome showApp={linkTo('Button')}/>
-//   ));
-
-// storiesOf('Button', module)
-//   .add('with text', () => (
-//     <Button onClick={action('clicked')}>Hello Button</Button>
-//   ))
-//   .add('with some emoji', () => (
-//     <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
-//   ));
-
-
 // This is for globally centering your stories.
 // and it should come at the very end
 addDecorator((story) => (
