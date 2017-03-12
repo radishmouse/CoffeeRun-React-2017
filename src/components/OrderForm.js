@@ -106,9 +106,13 @@ class OrderForm extends React.Component {
   // also using fat arrow for binding to OrderForm instance
   _handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state.currentOrder);
-    sessionStorage.setItem('currentOrder', JSON.stringify(this.state.currentOrder));
+    // console.log(this.state.currentOrder);
+    // sessionStorage.setItem('currentOrder', JSON.stringify(this.state.currentOrder));
+    let newOrder = {...this.state.currentOrder, id: (new Date()).getTime()};
+    this.props.submitHandler(newOrder);
     this.setState(blankOrder());
+
+    // and now, to focus on an element, we have to get its `ref`
   }
 }
 
