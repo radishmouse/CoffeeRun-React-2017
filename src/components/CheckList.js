@@ -24,6 +24,7 @@ CheckList.propTypes = {
 }
 
 CheckList.defaultProps = {
+  ordersArray: [],
   clickHandler: _logFromCheckList
 };
 
