@@ -8,6 +8,7 @@ import {
 } from '@kadira/storybook';
 
 import OrderForm from '../components/OrderForm';
+import OrderFormField from '../components/OrderFormField';
 
 import App from '../App';
 import CheckList from '../components/CheckList';
@@ -31,6 +32,32 @@ storiesOf('OrderForm', module)
   .add('regular', () => (
     <OrderForm />
   ));
+
+storiesOf('OrderFormField', module)
+  .add('text', () => (
+      <OrderFormField 
+        type='text' 
+        name='coffee'
+        onChange={_printTargetValue}
+        value={'espresso'}
+      />
+  ))
+  .add('email', () => (
+      <OrderFormField 
+        type='email' 
+        name='emailAddress'
+        onChange={_printTargetValue}
+        value={'you@hoo.com'}
+      />
+  ))
+  .add('range', () => (
+      <OrderFormField 
+        type='range' 
+        name='strength'
+        onChange={_printTargetValue}
+        value={50}
+      />
+  ))
 storiesOf('CheckList', module)
   .add('two', () => (
     <CheckList 
