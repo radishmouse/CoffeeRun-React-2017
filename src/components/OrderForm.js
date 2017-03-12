@@ -1,4 +1,5 @@
 import React from 'react';
+import OrderFormField from './OrderFormField';
 
 const blankOrder = () => ({
   currentOrder: {
@@ -33,44 +34,35 @@ class OrderForm extends React.Component {
     var {currentOrder:o} = this.state;
     return (
       <form onSubmit={this._handleSubmit}>
-        <label>Coffee</label>
-        <input 
+        <OrderFormField 
           type='text' 
           name='coffee'
           onChange={this._updateCurrentOrder}
           value={o.coffee}
         />
-        <br />
 
-        <label>Email</label>
-        <input 
+        <OrderFormField 
           type='email' 
           name='emailAddress'
           onChange={this._updateCurrentOrder}
           value={o.emailAddress}
         />
-        <br />
 
-        <label>Size</label>
-        <input 
+        <OrderFormField 
           type='text' 
           name='size'
           onChange={this._updateCurrentOrder}
           value={o.size}
         />
-        <br />
 
-        <label>Flavor</label>
-        <input 
+        <OrderFormField 
           type='text' 
           name='flavor'
           onChange={this._updateCurrentOrder}
           value={o.flavor}
         />
-        <br />
 
-        <label>Strength</label>
-        <input 
+        <OrderFormField 
           type='range' 
           min={1}
           max={100}
@@ -78,7 +70,6 @@ class OrderForm extends React.Component {
           onChange={this._updateCurrentOrder}
           value={o.strength}
         />
-        <br />
 
         <input type='submit' />
       </form>

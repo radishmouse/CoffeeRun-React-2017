@@ -1,3 +1,14 @@
+
+# TODO
+
+- incorporate styling as you work with each component.
+- add async via `fetch` with polyfill
+- deploy to static server
+- add more complex state management
+
+---
+
+
 # react coffeerun
 
 so, I could just have them copy/paste the code and show them that it renders.
@@ -131,7 +142,7 @@ modify the application's list of pending orders.
 
 ### keys
 
-when you have a component that draws a number of children,
+when you have a component that draws a number of childrengg/or,
 and therefore acts as their parent, that component should
 assign a `key` property to each of them.
 
@@ -143,6 +154,70 @@ and hasn't been updated, it benefits greatly from having
 unique keys assigned to items in a collection.
 otherwise, it would burn up a lot of its time and energy
 hashing individual elements and comparing those hashes, etc. etc.
+
+## orderform
+
+(need to fill this part out, i just kinda blew through it)
+
+highlights:
+
+- class component
+- renders form elements
+  - note that everything must be in pairs, or self-closing
+- specify type, name, value, and onchange
+
+### state
+
+assign `this.state` in the constructor
+
+also, let's talk about how we normally do this:
+in a normal HTML form, the DOM maintains the current state.
+This is not how we want to do this in React
+
+why not?
+well, the power of react is that the state of the UI, including
+the values currently set in a form, should be "rehydratable"
+
+we don't want the form elements to have to maintain their values.
+those values are dictated by what is passed into those components
+as props.
+
+though it looks a lot like you're just setting the usual properties
+on form elements, remember that these are actually all
+React elements.
+
+so, because each input's value is set to the value of a variable,
+you need a way to accept and reflect changes.
+
+to do that, we hook into the `onChange` handler of each one.
+let's write a function that will accept the change event.
+with that event, it will read out the name of the element
+and the value. 
+
+note that you can't really type into any of the fields.
+or rather, you can't see that anything is changing.
+
+let's attach a function to the onChange of the coffee input
+let's build up that form slowly
+
+in that function, output the value of `e.target.value`
+this shows you the last thing you typed in there.
+but the input itself doesn't show anything.
+
+since the value of the input is dictated by the value of `this.state.currentOrder`, you'll use the `this.setState` method
+to update the contents of `this.state`
+
+the reason you don't set it directly is that `this.setState` is
+async, under the hood. React will collect the various changes that will
+be applied to `this.state` and then optimize redrawing the UI.
+
+### bonus: abstract out the label/input pairs
+
+so, you could create your own OrderFormField component
+it should take a type, name, onchange, and value.
+
+and really, this shouldn't be a bonus.
+
 
 
 ## wiring it together as an App
