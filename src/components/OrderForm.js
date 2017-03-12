@@ -64,8 +64,6 @@ class OrderForm extends React.Component {
 
         <OrderFormField 
           type='range' 
-          min={1}
-          max={100}
           name='strength'
           onChange={this._updateCurrentOrder}
           value={o.strength}
