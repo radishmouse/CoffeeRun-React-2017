@@ -6,6 +6,25 @@
 - deploy to static server
 - add more complex state management
 
+## next components
+
+### delivered orders view
+
+- separate list view of "done" orders
+- could be one master list in `this.state`
+  - filtered views for "pending" and "done"
+
+### inventory
+
+this could be tricky, but this shows how much you have left
+of each kind of thing (flavors?)
+which determines which orders you can make/deliver
+
+and...they get replenished on a timer
+
+
+### ingredients view
+
 ---
 
 
