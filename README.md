@@ -144,3 +144,46 @@ unique keys assigned to items in a collection.
 otherwise, it would burn up a lot of its time and energy
 hashing individual elements and comparing those hashes, etc. etc.
 
+
+## wiring it together as an App
+
+The App module is pretty simple.
+In fact, it is very much like what you have written in your stories.
+
+To begin, create a new App module.
+Inside of it, create an App class that extends Component.
+
+In the render method, simply return a div that contains one of
+your OrderForm stories and one of your CheckList stories from
+you `stories.index.js` file.
+
+Confirm that it renders an OrderForm and a CheckList (with dummy info)
+
+Now, add a constructor that accepts `props` calls `super(props)`
+
+set `this.state` to an empty array.
+
+Then add an arrow function called `_addOrder`
+it should accept an order object.
+inside that function, call `this.setState`
+
+pass `_addOrder` as a prop to OrderForm
+
+Also, pass `this.state.orders` to CheckList as its `ordersArray` prop
+
+confirm that when you submit a new order, it gets added as a checklist item.
+
+now, create an arrow function called `_removeOrder`
+have it setState, and filter out an order that matches the id
+
+pass this arrow function to the checklist as its `clickHandler` property.
+
+
+## persisting to localstorage
+
+## remote sync
+
+## creating a dashboard view
+
+### 
+

@@ -9,6 +9,7 @@ import {
 
 import OrderForm from '../components/OrderForm';
 
+import App from '../App';
 import CheckList from '../components/CheckList';
 import Row from '../components/Row';
 import RowDescription from '../components/RowDescription';
@@ -22,6 +23,10 @@ addDecorator((story) => (
 ));
 
 
+storiesOf('App', module)
+  .add('empty', () => (
+    <App />
+  ));
 storiesOf('OrderForm', module)
   .add('regular', () => (
     <OrderForm />
