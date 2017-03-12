@@ -8,14 +8,14 @@ const Row = ({id, coffeeOrder, clickHandler}) => (
     <input 
       type="checkbox" 
       value={id}
-      onClick={clickHandler}
+      onClick={() => clickHandler(id)}
     />
     <RowDescription {...coffeeOrder} />
   </label>
 );
 
-const _logFromRow = (e) => {
-  console.log(`Row knows you clicked ${e.target.value} !`);
+const _logFromRow = (id) => {
+  console.log(`Row knows you clicked ${id} !`);
 };
 
 
