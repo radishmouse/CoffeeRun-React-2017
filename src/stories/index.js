@@ -7,6 +7,8 @@ import {
   addDecorator
 } from '@kadira/storybook';
 
+import OrderForm from '../components/OrderForm';
+
 import CheckList from '../components/CheckList';
 import Row from '../components/Row';
 import RowDescription from '../components/RowDescription';
@@ -19,6 +21,11 @@ addDecorator((story) => (
   </div>
 ));
 
+
+storiesOf('OrderForm', module)
+  .add('regular', () => (
+    <OrderForm />
+  ));
 storiesOf('CheckList', module)
   .add('two', () => (
     <CheckList 
